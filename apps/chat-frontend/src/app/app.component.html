@@ -1,1 +1,24 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+<div class="layout flex">
+  <div class="menu-lateral">
+    <app-menu-lateral></app-menu-lateral>
+  </div>
+  <div class="main h-screen w-full">
+    <div class="navbar w-full">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="messages w-full flex flex-col items-center">
+      <div
+        class="conversation h-screen w-3/5 h-screen flex flex-col items-end place-items-end p-5"
+      >
+        <div class="messages w-full">
+          <app-chat-history></app-chat-history>
+        </div>
+        <div class="input-area w-full">
+          <div class="input-text">
+            <app-type-question></app-type-question>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
