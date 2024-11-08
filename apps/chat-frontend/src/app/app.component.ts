@@ -7,7 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MenuLateralComponent } from './layout/menu-lateral/menu-lateral.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { ChatHistoryComponent } from './layout/chat-history/chat-history.component';
-import { TypeQuestionComponent } from './type-question/type-question.component';
+import { TypeQuestionComponent } from './layout/type-question/type-question.component';
 
 @Component({
   standalone: true,

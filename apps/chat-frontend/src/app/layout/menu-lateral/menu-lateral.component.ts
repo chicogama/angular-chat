@@ -9,15 +9,10 @@ import {
   faChartLine,
   IconDefinition,
   faPlus,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { RouterLink } from '@angular/router';
-
-interface MenuItem {
-  label: string;
-  icon: IconDefinition;
-  route: string;
-  active: boolean;
-}
+import { IMenuLateral } from '../../models/IMenuLateral';
 
 @Component({
   selector: 'app-menu-lateral',
@@ -26,11 +21,16 @@ interface MenuItem {
   templateUrl: './menu-lateral.component.html',
   styleUrl: './menu-lateral.component.css',
 })
-export class MenuLateralComponent {
+export class MenuLateralComponent implements IMenuLateral {
+  label!: string;
+  icon!: IconDefinition;
+  route!: string;
+  active!: boolean;
   isExpanded = true;
   faBars = faBars; // Ícone do botão toggle
+  faXmark = faXmark;
 
-  menuItems: MenuItem[] = [
+  menuItems: IMenuLateral[] = [
     {
       label: 'Nova Conversa',
       icon: faPlus,

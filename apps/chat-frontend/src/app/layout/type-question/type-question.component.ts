@@ -1,4 +1,3 @@
-import { fontAwesomeIcons } from './../../../shared/font-awesome-icons';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
