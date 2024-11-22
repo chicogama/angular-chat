@@ -1,22 +1,24 @@
-<div class="layout shadow-md">
-  <div class="main">
-    <div class="w-full fixed">
-      <app-navbar></app-navbar>
-    </div>
-    <div class="messages w-full flex items-center">
+<div class="flex flex-row">
+  <div class="sidemenu">
+    <aside>
+      <app-menu-lateral></app-menu-lateral>
+    </aside>
+  </div>
+  <div class="w-full h-screen flex flex-col items-center">
+    <header class="sticky top-0 z-40 w-full">
+      <nav>
+        <app-navbar> </app-navbar>
+      </nav>
+    </header>
+    <main
+      class="max-w-4xl flex flex-col items-center justify-center overflow-auto scrollbar-hide"
+    >
       <div>
-        <app-menu-lateral></app-menu-lateral>
+        <app-historico-questoes></app-historico-questoes>
       </div>
-      <div class="conversation w-3/5 flex flex-col items-end justify-end p-5">
-        <div class="messages-history w-full overflow-auto scrollbar-hide">
-          <app-historico-questoes></app-historico-questoes>
-        </div>
-        <div class="input-area w-full grow">
-          <div class="input-text">
-            <app-envio-pergunta></app-envio-pergunta>
-          </div>
-        </div>
-      </div>
+    </main>
+    <div class="sticky bottom-0 z-40 w-full">
+      <app-envio-pergunta></app-envio-pergunta>
     </div>
   </div>
 </div>
