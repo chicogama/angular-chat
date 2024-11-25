@@ -1,24 +1,28 @@
-<div class="flex flex-row">
-  <div class="sidemenu">
+<div class="relative flex h-full w-full overflow-hidden transition-colors z-0">
+  <div class="sidemenu max-h-screen">
     <aside>
       <app-menu-lateral></app-menu-lateral>
     </aside>
   </div>
-  <div class="w-full h-screen flex flex-col items-center">
-    <header class="sticky top-0 z-40 w-full">
+  <div
+    class="w-full max-h-screen grow flex flex-col items-center justify-between"
+  >
+    <header class="w-full relative z-40">
       <nav>
         <app-navbar> </app-navbar>
       </nav>
     </header>
     <main
-      class="max-w-4xl flex flex-col items-center justify-center overflow-auto scrollbar-hide"
+      class="max-w-4xl h-full flex flex-col-reverse overflow-auto scrollbar-hide shadow-md rounded-sm"
     >
       <div>
         <app-historico-questoes></app-historico-questoes>
       </div>
     </main>
-    <div class="sticky bottom-0 z-40 w-full">
-      <app-envio-pergunta></app-envio-pergunta>
+    <div class="w-full">
+      <div class="max-w-4xl m-auto">
+        <app-envio-pergunta></app-envio-pergunta>
+      </div>
     </div>
   </div>
 </div>
